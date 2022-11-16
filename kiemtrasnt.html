@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //kiểm tra 1 số có phải SNT hay không?
+    //pp1: đặt cờ, check đúng sai
+    let number = +prompt("Nhập vào giá trị số bất kỳ: ")
+    if (number < 2) {
+        console.log(number + " không phải SNT")
+    } else {
+        let flag = false
+        //lớp Math: lớp toán học trong lập trình, cung cấp các phương thức có sẵn để thao tác với số
+        //căn bậc 2: Math.sqrt(number) => Math.sqrt(100) = 10
+        //lũy thừa: Math.pow(cơ số, số mũ); Math.random() = (0 -> 1)
+        //i <= Math.sqrt(number)
+        for (let i = 2; i < number - 1; i++) {
+            if (number % i === 0) {
+                flag = true
+                break
+            }
+        }
+        if (!flag) {
+            console.log(number + " là SNT")
+        } else {
+            console.log(number + " không phải SNT")
+        }
+    }
+
+    //pp2: đếm số lượng ước
+    let number1 = +prompt("Nhập vào giá trị số bất kỳ: ")
+    if (number1 < 2) {
+        console.log(number1 + " không phải SNT")
+    } else {
+        let count = 0
+        for (let i = 1; i <= number; i++) {
+            if (number % i === 0) {
+                count += 1
+            }
+        }
+        if (count === 2) {
+            console.log(number1 + " là SNT")
+        } else {
+            console.log(number1 + " không phải SNT")
+        }
+    }
+</script>
+</html>

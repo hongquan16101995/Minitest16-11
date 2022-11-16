@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let sumSNT = 0
+    let number = 2
+
+    while (number < 500) {
+        let flag = false
+        for (let j = 2; j < number - 1; j++) {
+            if (number % j === 0) {
+                flag = true
+                break
+            }
+        }
+        if (!flag) {
+            sumSNT += number
+        }
+        number += 1
+    }
+    console.log("Tổng các SNT nhỏ hơn 500 là: " + sumSNT)
+</script>
+</html>
